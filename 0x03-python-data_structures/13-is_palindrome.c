@@ -7,36 +7,27 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tmp = *head;
-	unsigned int size = 0, i = 0;
-	int data[10240];
+	listint_t *cp = *head;
+	int buff[10240], init = 0, end = 0;
 
-	if (head == NULL) /* non-existing list is not */
-		return (0);
-
-	if (*head == NULL) /* empty list is palindrome */
+	if (!*head || !((*head)->next))
 		return (1);
 
-	while (tmp) /* find size of linked list */
+	while (cp)
 	{
-		tmp = tmp->next;
-		size += 1;
-
-	}
-	if (size == 1) /* single node list is palindrome */
-		return (1);
-
-	tmp = *head;
-	while (tmp) /* pull node data into array to compare */
-	{
-		data[i++] = tmp->n;
-		tmp = tmp->next;
+		buff[end] = cp->n;
+		cp = cp->next;
+		end++;
 	}
 
-	for (i = 0; i <= (size/2); i++)
+	end--;
+
+	while (init <= end / 2)
 	{
-		if (data[i] != data[size - i - 1])
+		if (buff[init] != buff[end - init])
 			return (0);
+		init++;
 	}
+
 	return (1);
 }
