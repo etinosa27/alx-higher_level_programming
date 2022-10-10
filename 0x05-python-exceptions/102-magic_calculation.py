@@ -5,9 +5,12 @@ def magic_calculation(a, b):
         try:
             if i > a:
                 raise Exception("Too far")
-		else:
+            else:
                 result += (a**b)/i
-        except Exception:
+        except:
             result = b + a
             break
     return result
+
+#import dis
+#dis.dis(magic_calculation)
