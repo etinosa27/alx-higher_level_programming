@@ -6,7 +6,6 @@ Can access and update size and position
 Can print to stdout the square using #'s
 """
 
-
 class Square:
     """
     class Square definition
@@ -21,8 +20,7 @@ class Square:
         area(self)
         my_print(self)
     """
-
-	 def __init__(self, size=0, position=(0, 0)):
+def __init__(self, size=0, position=(0, 0)):
         """
         Initializes square
         Attributes:
@@ -32,16 +30,16 @@ class Square:
         self.size = size
         self.position = position
 
-    @property
-    def size(self):
+	@property
+	def size(self):
         """"
         Getter
         Return: size
         """
         return self.__size
 
-    @size.setter
-    def size(self, value):
+	@size.setter
+	def size(self, value):
         """
         Setter
 
@@ -55,16 +53,16 @@ class Square:
         else:
             self.__size = value
 
-    @property
-    def position(self):
+	@property
+	def position(self):
         """"
         Getter
         Return: position
         """
         return self.__position
 
-    @position.setter
-    def position(self, value):
+	@position.setter
+	def position(self, value):
         """
         Setter
 
@@ -78,7 +76,7 @@ class Square:
         else:
             self.__position = value
 
-    def area(self):
+	def area(self):
         """
         Calculates area of square
         Returns:
@@ -86,7 +84,7 @@ class Square:
         """
         return (self.__size)**2
 
-    def my_print(self):
+	def my_print(self):
         if self.__size == 0:
             print("")
         else:
