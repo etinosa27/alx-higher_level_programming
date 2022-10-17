@@ -15,23 +15,23 @@ queen must be placed on the chessboard.
 import sys
 
 
-    def init_board(n):
-	"""Initialize an `n`x`n` sized chessboard with 0's."""
+def init_board(n):
+    """Initialize an `n`x`n` sized chessboard with 0's."""
     board = []
     [board.append([]) for i in range(n)]
     [row.append(' ') for i in range(n) for row in board]
     return (board)
 
 
-    def board_deepcopy(board):
-	"""Return a deepcopy of a chessboard."""
+def board_deepcopy(board):
+    """Return a deepcopy of a chessboard."""
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
     return (board)
 
 
-    def get_solution(board):
-	"""Return the list of lists representation of a solved chessboard."""
+def get_solution(board):
+    """Return the list of lists representation of a solved chessboard."""
     solution = []
     for r in range(len(board)):
         for c in range(len(board)):
@@ -40,8 +40,8 @@ import sys
                 break
     return (solution)
 
-    def xout(board, row, col):
-	"""X out spots on a chessboard.
+def xout(board, row, col):
+    """X out spots on a chessboard.
     All spots where non-attacking queens can no
     longer be played are X-ed out.
     Args:
@@ -91,8 +91,8 @@ import sys
         c -= 1
 
 
-    def recursive_solve(board, row, queens, solutions):
-    	"""Recursively solve an N-queens puzzle.
+def recursive_solve(board, row, queens, solutions):
+    """Recursively solve an N-queens puzzle.
 	Args:
 	board (list): The current working chessboard.
         row (int): The current working row.
