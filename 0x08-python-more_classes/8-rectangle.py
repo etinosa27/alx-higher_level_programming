@@ -49,7 +49,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
- def area(self):
+    def area(self):
         """Return the area of the Rectangle."""
         return (self.__width * self.__height)
 
@@ -68,7 +68,7 @@ class Rectangle:
         Raises:
             TypeError: If either of rect_1 or rect_2 is not a Rectangle.
         """
-	if not isinstance(rect_1, Rectangle):
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
@@ -89,7 +89,8 @@ class Rectangle:
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
-   def __repr__(self):
+
+    def __repr__(self):
         """Return the string representation of the Rectangle."""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"

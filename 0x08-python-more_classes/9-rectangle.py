@@ -23,7 +23,7 @@ class Rectangle:
         self.width = width
         self.height = height
 
-@property
+    @property
     def width(self):
         """Get/set the width of the Rectangle."""
         return self.__width
@@ -48,6 +48,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
     def area(self):
         """Return the area of the Rectangle."""
         return (self.__width * self.__height)
@@ -58,7 +59,7 @@ class Rectangle:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
-@staticmethod
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Return the Rectangle with the greater area.
         Args:

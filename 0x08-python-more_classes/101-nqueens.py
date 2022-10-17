@@ -12,10 +12,10 @@ Solutions are represented in the format [[r, c], [r, c], [r, c], [r, c]]
 where `r` and `c` represent the row and column, respectively, where a
 queen must be placed on the chessboard.
 """
-import sys
+    import sys
 
 
-def init_board(n):
+    def init_board(n):
     """Initialize an `n`x`n` sized chessboard with 0's."""
     board = []
     [board.append([]) for i in range(n)]
@@ -23,14 +23,14 @@ def init_board(n):
     return (board)
 
 
-def board_deepcopy(board):
+    def board_deepcopy(board):
     """Return a deepcopy of a chessboard."""
     if isinstance(board, list):
         return list(map(board_deepcopy, board))
     return (board)
 
 
-def get_solution(board):
+    def get_solution(board):
     """Return the list of lists representation of a solved chessboard."""
     solution = []
     for r in range(len(board)):
@@ -40,7 +40,7 @@ def get_solution(board):
                 break
     return (solution)
 
-def xout(board, row, col):
+    def xout(board, row, col):
     """X out spots on a chessboard.
     All spots where non-attacking queens can no
     longer be played are X-ed out.
@@ -91,7 +91,7 @@ def xout(board, row, col):
         c -= 1
 
 
-def recursive_solve(board, row, queens, solutions):
+    def recursive_solve(board, row, queens, solutions):
     """Recursively solve an N-queens puzzle.
     Args:
         board (list): The current working chessboard.
@@ -116,7 +116,7 @@ def recursive_solve(board, row, queens, solutions):
      return (solutions)
 
 
-if __name__ == "__main__":
+    if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
