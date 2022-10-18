@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-LockedClass = __import__('101-locked_class').LockedClass
+"""Defines a locked class."""
 
-lc = LockedClass()
 
-lc.first_name = "John"
-print(lc.first_name)
-print("If first name printed, it works!")
+    class LockedClass:
+    """
+    Prevent the user from instantiating new LockedClass attributes
+    for anything but attributes called 'first_name'.
+    """
 
-print("Now let's check setting another attribute...")
-try:
-    lc.last_name = "Snow"
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    __slots__ = ["first_name"]
