@@ -3,7 +3,7 @@
 '''
 
 
-def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
+    def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
     '''Computes the size of a matrix and performs some
     matrix validation.
     Args:
@@ -53,7 +53,7 @@ def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
     return size0, size1
 
 
-def matrix_mul(m_a, m_b):
+    def matrix_mul(m_a, m_b):
     '''Multiplies 2 matrices.
     Args:
         m_a (list): The first matrix.
