@@ -3,7 +3,7 @@
 import numpy as np
 
 
-    def lazy_matrix_mul(m_a, m_b):
+def lazy_matrix_mul(m_a, m_b):
     """Return the multiplication of two matrices.
     Args:
         m_a (list of lists of ints/floats): The first matrix.
